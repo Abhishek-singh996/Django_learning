@@ -1,0 +1,73 @@
+
+
+{% block title %}
+  My Tennis Club
+{% endblock %}
+
+{% block content %}
+  <style>
+    /* Add some custom styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 3em;
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-size: 1.8em;
+      color: #444;
+      margin-top: 40px;
+      border-bottom: 2px solid #ff6347;
+      display: inline-block;
+    }
+    p {
+      font-size: 1.2em;
+      margin: 20px 0;
+    }
+    a {
+      color: #ff6347;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #ff6347;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background-color: #ff4500;
+    }
+  </style>
+
+  <div class="container">
+    <h1>Welcome to My Tennis Club</h1>
+
+    <h3>Members</h3>
+    
+    <p>Check out all our <a href="members/">members</a> to see who’s part of the club.</p>
+    
+    <a href="members/" class="btn">View Members</a>
+  </div>
+{% endblock %}

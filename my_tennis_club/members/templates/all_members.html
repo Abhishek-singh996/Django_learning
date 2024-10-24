@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Members</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #ff6347;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .member-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .member-list li {
+            background-color: #e9ecef;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .member-list li span {
+            font-weight: bold;
+        }
+
+        .no-members {
+            text-align: center;
+            font-style: italic;
+            color: #888;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            font-size: 1.1em;
+            background-color: #ff6347;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>All Members</h1>
+    
+    <ul class="member-list">
+        {% for member in mymembers %}
+            <li>
+                <span>{{ member.firstname }} {{ member.lastname }}</span>
+                <span class="member-role">Member</span> <!-- Optional: Role/Status can be added -->
+            </li>
+        {% empty %}
+            <li class="no-members">No members found.</li>
+        {% endfor %}
+    </ul>
+    
+    <a href="/" class="btn">Back to Home</a>
+</div>
+
+</body>
+</html>
